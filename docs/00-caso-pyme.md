@@ -9,9 +9,10 @@
 * **Operación:** Atendido de manera unipersonal por su dueña en jornada continua
 
 ## 2. Evidencia de Existencia
-La existencia formal y tributaria de la empresa se acredita mediante:
+La existencia formal y operacional de la empresa se acredita mediante:
 * **Declaración Jurada de Inicio de Actividades (SII):** Folio N° 21007629601 (Trámite registrado el 30-09-2021).
-* **Comprobante en Repositorio:** El documento probatorio completo se encuentra adjunto en los anexos del informe oficial en la carpeta `/informe`.
+* **Entrevista a Encargada y Consentimiento Informado:** Acta firmada el 02 de septiembre de 2026 por Franca Valeska Barra Neira (Trabajadora/Encargada).
+* **Documentos probatorios:** Los respaldos completos se encuentran disponibles en los anexos del informe oficial y en el archivo [`acta_consentimiento_entrevista.pdf`](../assets/acta_consentimiento_entrevista.pdf).
 
 ## 3. Formulación Medible del Problema de Gestión
 El negocio opera con un **0% de trazabilidad digital e individual por producto**, registrando los flujos de dinero exclusivamente mediante montos globales en el terminal POS diario sin desglose de artículos vendidos ni costos asociados.
