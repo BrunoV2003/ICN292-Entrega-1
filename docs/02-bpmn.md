@@ -7,7 +7,7 @@ El proceso actual evidencia la ausencia de herramientas tecnológicas en el nego
  Recepción Cotejo superficial de factura en papel contra bultos recibidos. Las mercaderías van directo a la estantería sin registrar ingresos en sistema.
  Venta Cobro en caja mediante terminal POS o efectivo. El inventario no se rebaja y no existe registro del producto comercializado.
 
-![Diagrama As-Is](..assetsbpmn-as-is.png)
+![Diagrama As-Is](https://github.com/BrunoV2003/ICN292-Entrega-1/raw/main/assets/bpmn-as-is.png)
 
 ---
 
@@ -18,7 +18,7 @@ El proceso propuesto integra la aplicación local en los puntos críticos de dec
  Venta Ágil Escaneo de productos en caja, totalización y rebaja inmediata del stock en la base de datos local.
  Ajustes Registro formal de mermas por vencimiento o rotura.
 
-![Diagrama To-Be](..assetsbpmn-to-be.png)
+![Diagrama To-Be](https://github.com/BrunoV2003/ICN292-Entrega-1/raw/main/assets/bpmn-to-be.png)
 
 ---
 
