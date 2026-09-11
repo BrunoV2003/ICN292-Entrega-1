@@ -1,37 +1,39 @@
-# ICN-292: Sistemas de Información para la Gestión — Entrega 1 (2026-2)
+# Sistema de Información para la Gestión (SIG) - Minimarket Alma Neira Muñoz
 
-## Ficha del Equipo
-* **Paralelo:** 101
-* **Integrantes:**
-  * Bruno Alejandro Vega Veloso (21.281.706-6) - 202360680-4
-  * Nombre Completo 2 (RUT) - Rol
-  * Nombre Completo 3 (RUT) - Rol
-  * Nombre Completo 4 (RUT) - Rol
-  * Nombre Completo 5 (RUT) - Rol
----
-
-## 1. Contexto de la PYME y Problema de Negocio
-* **PYME:** Minimarket [Nombre o referencia], Rengo, Región de O'Higgins.
-* **Problema:** Gestión manual/visual del inventario y ausencia de trazabilidad financiera inmediata (quiebres de stock, costos de adquisición desactualizados y márgenes no calculados).
-* **Objetivo del SIG:** Implementar un sistema local offline-first para registrar entradas, ventas con lector de barras, control de stock mínimo y márgenes brutos.
+## 1. Identificación de la PYME y Problema Central
+* **PYME:** Minimarket Alma Neira Muñoz (Microempresa, Persona Natural con Giro, SII Folio N° 21007629601).
+* **Ubicación:** Pasaje Carlos Isamitt 785, Rengo, Región de O'Higgins.
+* **Problema de Gestión:** El negocio opera con un 0% de trazabilidad digital e individual por producto; los registros de venta se limitan a montos globales en el terminal POS. El control de inventario es 100% manual y visual, provocando quiebres de stock recurrentes en ciclos rígidos de 15 días, pérdidas por merma no cuantificada y entre 1 a 2 horas diarias perdidas en revisión física de perchas.
+* **Objetivo de la Solución:** Desarrollar un software de gestión local (localhost) para registrar productos (vía lector de código de barras), procesar ventas con descuento automático de inventario, calcular puntos de reposición y mantener respaldos locales sincronizables con la nube.
 
 ---
 
-## 2. Estructura del Repositorio
-* `/docs/`: Documentación detallada del caso, requerimientos, procesos BPMN y modelo relacional.
-  * `00-caso-pyme.md`: Contexto del negocio y evidencia de levantamiento.
-  * `01-requerimientos.md`: Requisitos funcionales (RF) y no funcionales (RNF).
-  * `02-bpmn.md`: Explicación de procesos As-Is y To-Be.
-  * `03-er-preliminar.md`: Diagrama y justificación del modelo Entidad-Relación.
-* `/assets/`: Diagramas exportados en alta resolución (BPMN y E-R).
-* `/informe/`: Informe formal en formatos PDF y editable (.docx / .tex).
+## 2. Integrantes y Roles (Grupo N° 5)
+* **Bruno Vega Veloso** (Rol: 202360680-4) - Arquitectura y Gestión de Repositorio / Backend
+* **Lorenzo Ruiz Flandez** (Rol: 202304619-1) - Modelado de Procesos BPMN y Requerimientos
+* **Igor Ríos Rojas** (Rol: 202360586-7) - Modelado de Procesos BPMN y Diagramación Bizagi
+* **Michelle Medina Barra** (Rol: 202360506-9) - Levantamiento de Caso PYME y Análisis de Riesgos / Ley 21.719
+* **Charles Piket Silva** (Rol: 202360512-3) - Diseño de Base de Datos y Lógica de Indicadores (KPIs)
 
 ---
 
-## 3. Relación con la Entrega 2
-La arquitectura diseñada en esta entrega servirá de especificación funcional para la implementación del software en entorno local (`localhost:3000`), operando de forma desacoplada de la nube para transacciones críticas.
+## 3. Estructura del Repositorio
+* **`README.md`**: Resumen ejecutivo y guía rápida de comprensión del proyecto (≤ 10 minutos).
+* **`docs/`**: Especificación detallada del proyecto en formato Markdown:
+  * [`00-caso-pyme.md`](./docs/00-caso-pyme.md): Contexto del negocio, evidencias formales y transcripción de entrevista.
+  * [`01-requerimientos.md`](./docs/01-requerimientos.md): Actores, alcance in/out, requisitos funcionales (RF) priorizados por MoSCoW y no funcionales (RNF).
+  * [`02-bpmn.md`](./docs/02-bpmn.md): Explicación detallada de los procesos As-Is y To-Be con enlaces a los diagramas.
+  * [`03-er-preliminar.md`](./docs/03-er-preliminar.md): Nota explicativa sobre el modelo de datos preliminar (eximido de evaluación por instrucción docente).
+* **`assets/`**: Diagramas de procesos exportados en alta resolución (`bpmn-as-is.png`, `bpmn-to-be.png`) y el archivo fuente nativo de Bizagi (`modelo_procesos_minimarket.bpm`).
+* **`informe/`**: Copia digital obligatoria del informe formal de la Entrega 1 en formato PDF y editable (.docx / .tex):
+  * Acceso directo: [Carpeta de Informes](./informe/)
 
 ---
 
-## 4. Enlaces y Accesos
-* **Informe oficial:** [Carpeta informe/](./informe/)
+## 4. Proyección hacia la Entrega 2 (Entorno Localhost)
+La solución se implementará para ejecutarse de forma local y autónoma en el computador del local (sin depender de Internet para la venta y control de stock):
+* **Frontend:** HTML5, CSS3, JavaScript.
+* **Backend:** Python con Flask.
+* **Persistencia:** Base de datos SQLite embebida (archivo local).
+* **Periféricos:** Integración con lector de código de barras USB/HID.
+* **Respaldo:** Script automatizado de exportación periódica con política FIFO (máximo 5 copias locales) y sincronización asíncrona hacia Google Drive API v3.
