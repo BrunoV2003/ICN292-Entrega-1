@@ -30,10 +30,3 @@
 
 ---
 
-## 4. Proyección hacia la Entrega 2 (Entorno Localhost)
-La solución se implementará para ejecutarse de forma local y autónoma en el computador del local (sin depender de Internet para la venta y control de stock):
-* **Frontend:** HTML5, CSS3, JavaScript.
-* **Backend:** Python con Flask.
-* **Persistencia:** Base de datos SQLite embebida (archivo local).
-* **Periféricos:** Integración con lector de código de barras USB/HID.
-* **Respaldo:** Script automatizado de exportación periódica con política FIFO (máximo 5 copias locales) y sincronización asíncrona hacia Google Drive API v3.
